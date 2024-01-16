@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="estate_property_offer_view_tree" model="ir.ui.view">
+        <field name="name">estate.property.offer.tree</field>
+        <field name="model">estate.property.offer</field>
+        <field type="xml" name="arch">
+             <tree string="Danh sach loại bất động sản"  editable="bottom">
+                <field name="price"/>
+                <field name="status"/>
+                <field name="partner_id"/>
+                 <field name="validity"/>
+                 <field name="date_deadline"/>
+                 <button name="offer_accept" type="object" title="Accept" icon="fa-check" />
+                 <button name="offer_refuse" type="object" title="Refuse" icon="fa-times" />
+            </tree>
+        </field>
+
+    </record>
+
+    <record id="estate_property_offer_view_form" model="ir.ui.view">
+        <field name="name">estate.property.offer.form</field>
+        <field name="model">estate.property.offer</field>
+        <field type="xml" name="arch">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="price"/>
+                        <field name="status"/>
+                        <field name="partner_id"/>
+                        <field name="validity"/>
+                        <field name="date_deadline"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="estate_property_offer_action" model="ir.actions.act_window">
+        <field name="name">Danh sách mặc cả</field>
+        <field name="res_model">estate.property.offer</field>
+        <field name="domain">[('property_type_id','=', active_id)]</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

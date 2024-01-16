@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Top menu item -->
+    <menuitem id="estate_menu_root" name="Bất động sản Aki">
+        <menuitem id="estate_advertisement_menu" name="Quảng cáo" sequence="5">
+            <menuitem id="estate_property_menu_action" action="estate_property_action" sequence="5"/>
+        </menuitem>
+
+        <menuitem id="estate_settings_menu" name="Cài đặt" sequence="5">
+            <menuitem id="estate_property_type_menu_action" action="estate_property_type_action" sequence="1"/>
+            <menuitem id="estate_property_tag_menu_action" action="estate_property_tag_action" sequence="5"/>
+        </menuitem>
+
+    </menuitem>
+</odoo>
